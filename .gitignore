@@ -2,14 +2,17 @@
 .idea/
 .vscode/
 *.iml
+mise.toml
 
 # Ignore build artifacts
 java-server/build/
 java-server/.gradle/
+java-server/gradle*
 go-server/go.sum
 nodejs-server/node_modules/
 python-server/__pycache__/
 python-server/*.pyc
+rust-server/target
 
 # Ignore Docker volumes
 .docker/

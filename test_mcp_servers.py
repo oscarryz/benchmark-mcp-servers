@@ -15,6 +15,7 @@ SERVERS = {
     "go":      "http://localhost:8081/mcp",
     "nodejs":  "http://localhost:8083/mcp",
     "java":    "http://localhost:8080/mcp",
+    "rust":    "http://localhost:8084/mcp",
 }
 
 

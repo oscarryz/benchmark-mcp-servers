@@ -32,6 +32,7 @@ benchmark-mcp-servers/
 ├── go-server/      # Official MCP SDK v1.2.0
 ├── nodejs-server/  # SDK v1.26.0 (with CVE-2026-25536 mitigation)
 ├── python-server/  # FastMCP 2.12.0+ + FastAPI
+├── rust-server/    # Official MCP SDK 0.16.0+ + Axum
 ├── benchmark/      # k6 load testing scripts and tools
 └── docker-compose.yml
 ```
@@ -69,6 +70,7 @@ The servers will be available at:
 - Go: `http://localhost:8081`
 - Python: `http://localhost:8082`
 - Node.js: `http://localhost:8083`
+- Rust: `http://localhost:8084`
 
 ### Run Load Tests
 

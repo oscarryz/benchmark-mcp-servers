@@ -13,8 +13,9 @@ declare -A SERVERS=(
     [go]="mcp-go-server:8081"
     [nodejs]="mcp-nodejs-server:8083"
     [java]="mcp-java-server:8080"
+    [rust]="mcp-rust-server:8084"
 )
-ALL_SERVICES="python-server go-server nodejs-server java-server"
+ALL_SERVICES="python-server go-server nodejs-server java-server rust-server"
 
 # Colors
 GREEN='\033[0;32m'
@@ -38,7 +39,7 @@ wait_for_health() {
 
     info "Waiting for $name to be ready (port $port)..."
     while true; do
-        # Try /health (Go, Node.js)
+        # Try /health (Go, Node.js, Rust)
         if curl -sf -m 2 "http://localhost:$port/health" > /dev/null 2>&1; then
             break
         fi
@@ -169,7 +170,7 @@ main() {
     ok "mock-api is up"
 
     # Benchmark each server
-    for name in python go nodejs java; do
+    for name in python go nodejs java rust; do
         benchmark_server "$name" || warn "Failed to benchmark $name, continuing..."
     done
 
